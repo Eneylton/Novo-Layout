@@ -1,0 +1,24 @@
+<h3>Lista de Alunos</h3>
+<hr />
+
+<div class="ui-g-12">
+    <p-toolbar>
+      <div class="ui-toolbar-group-left">
+        <button pButton type="button" label="Novo Aluno" icon="fa fa-arrow-circle-left"></button>
+
+      </div>
+
+      <div class="ui-toolbar-group-right">
+        <button pButton type="button" icon="fa-search" class="ui-button-warning"></button>
+        <button pButton type="button" icon="fa-refresh" class="ui-button-danger"></button>
+      </div>
+    </p-toolbar>
+
+    <hr />
+
+    <p-dataTable>
+        <p-column field="nome" header="Nome"></p-column>
+        <p-column field="year" header="Endereço"></p-column>
+        <p-column field="brand" header="Email"></p-column>
+        <p-column field="color" header="Telefone"></p-column>
+    </p-dataTable>
