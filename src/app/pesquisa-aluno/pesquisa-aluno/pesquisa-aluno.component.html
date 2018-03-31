@@ -22,10 +22,23 @@
         <input #gb type="text" pInputText size="50" >
     </div>
 
-    <p-dataTable>
-        <p-column field="id" header="Código"></p-column>
+    <p-dataTable [value]="alunos" [paginator]="true" [rows]="5" [responsive]="true" #tabela>
+
+        <p-column field="id" header="Código" styleClass="col-id"></p-column>
         <p-column field="nome" header="Nome"></p-column>
-        <p-column field="year" header="Endereço"></p-column>
-        <p-column field="brand" header="Email"></p-column>
-        <p-column field="color" header="Telefone"></p-column>
-    </p-dataTable>
+        <p-column field="endereco" header="Endereço"></p-column>
+        <p-column field="email" header="Email"></p-column>
+        <p-column field="telefone" header="Telefone" styleClass="col-tel"></p-column>
+
+
+        <p-column styleClass="col-acoes" header="Ações">
+          <ng-template let-aluno="rowData" pTemplate="body">
+
+              <button pButton icon="fa-pencil" pTooltip="Editar" class="ui-button-warning" tooltipPosition="top" [routerLink]="['/alunos', aluno.id]"></button>
+
+            <button pButton icon="fa-trash" pTooltip="Excluir" tooltipPosition="top" (click)="confirmarExclusao(aluno.id)"></button>
+          </ng-template>
+
+
+        </p-column>
+      </p-dataTable>

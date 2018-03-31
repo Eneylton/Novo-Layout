@@ -4,11 +4,12 @@
 <hr />
 
 <div class="ui-g-12">
+
+  <form #f="ngForm" autocomplete="off" (ngSubmit)="salvar(f)">
+
   <p-toolbar>
     <div class="ui-toolbar-group-left">
-      <button pButton type="button" label="Salvar" icon="fa-plus"></button>
-
-
+      <button pButton type="submit" label="Salvar" icon="fa-plus"></button>
 
     </div>
 
@@ -27,29 +28,30 @@
     <hr />
     <br />
     <span class="ui-float-label">
-      <input id="float-input" type="text" size="30" pInputText>
-      <label for="float-input">Nome</label>
+      <input id="nome" pInputText type="text" [(ngModel)]="aluno.nome" name="nome" ngModel #nome="ngModel" required minlength="5">
+      <label for="nome">Nome</label>
     </span>
     <br />
     <span class="ui-float-label">
-      <input id="float-input" type="text" size="30" pInputText>
-      <label for="float-input">Endereço</label>
+      <input id="end" pInputText type="text" [(ngModel)]="aluno.endereco" name="endereco" ngModel #endereco="ngModel" required minlength="5">
+      <label for="end">Endereço</label>
     </span>
     <br />
     <span class="ui-float-label">
-      <input id="float-input" type="text" size="30" pInputText>
-      <label for="float-input">Telefone</label>
+      <input id="email" pInputText type="text" [(ngModel)]="aluno.email" name="email" ngModel #email="ngModel" required minlength="5">
+      <label for="email">Telefone</label>
     </span>
 
     <br />
 
     <span class="ui-float-label">
-      <input id="float-input" type="text" size="30" pInputText>
-      <label for="float-input">Email</label>
+        <input id="tel" pInputText type="text" [(ngModel)]="aluno.telefone" name="telefone" ngModel #telefone="ngModel" required minlength="5">
+      <label for="tel">Email</label>
     </span>
 
 
 
   </p-card>
 
+</form>
 </div>
