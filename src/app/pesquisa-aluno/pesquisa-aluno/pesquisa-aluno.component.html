@@ -19,7 +19,7 @@
 
     <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
         <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
-        <input #gb type="text" pInputText size="50" >
+        <input #gb type="text" pInputText size="40" >
     </div>
 
     <p-dataTable [value]="alunos" [paginator]="true" [rows]="5" [responsive]="true" #tabela>
@@ -36,7 +36,7 @@
 
               <button pButton icon="fa-pencil" pTooltip="Editar" class="ui-button-warning" tooltipPosition="top" [routerLink]="['/alunos', aluno.id]"></button>
 
-            <button pButton icon="fa-trash" pTooltip="Excluir" tooltipPosition="top" (click)="confirmarExclusao(aluno.id)"></button>
+            <button pButton icon="fa-trash" pTooltip="Excluir" class="ui-button-danger" tooltipPosition="top" (click)="confirmarExclusao(aluno.id)"></button>
           </ng-template>
 
 
