@@ -4,13 +4,15 @@ import { PesquisaAlunoComponent } from './pesquisa-aluno/pesquisa-aluno.componen
 import { ToolbarModule } from 'primeng/components/toolbar/toolbar';
 import { ButtonModule } from 'primeng/components/button/button';
 import { DataTableModule } from 'primeng/components/datatable/datatable';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     ToolbarModule,
     ButtonModule,
-    DataTableModule
+    DataTableModule,
+    RouterModule
   ],
   declarations: [PesquisaAlunoComponent],
   exports:[PesquisaAlunoComponent]

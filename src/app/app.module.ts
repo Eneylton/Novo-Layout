@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { PesquisaAlunoModule } from './pesquisa-aluno/pesquisa-aluno.module';
 import { CadastroAlunoModule } from './cadastro-aluno/cadastro-aluno.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -5,6 +6,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     CadastroAlunoModule,
-    PesquisaAlunoModule
+    PesquisaAlunoModule,
+    CoreModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/components/button/button';
 import { PanelModule } from 'primeng/components/panel/panel';
 import { CardModule } from 'primeng/components//card/card';
 import { InputTextModule } from 'primeng/components/inputtext/inputtext';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
@@ -14,10 +15,8 @@ import { InputTextModule } from 'primeng/components/inputtext/inputtext';
     ToolbarModule,
     ButtonModule,
     CardModule,
-    InputTextModule
-
-
-
+    InputTextModule,
+    RouterModule
 
   ],
   declarations: [CadastroAlunoComponent],
